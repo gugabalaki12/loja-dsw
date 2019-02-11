@@ -9,8 +9,8 @@ class register extends CI_Controller {
 
 	public function index()
 	{  
-
-        $this->load->view('header');
+        $dados['name'] = "Cadastro";
+        $this->load->view('header', $dados);
         $this->load->view('registro');
 		
 	
