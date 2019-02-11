@@ -9,11 +9,11 @@ class login extends CI_Controller {
 
 	public function index()
 	{  
-
-        $this->load->view('header');
+		   $dados['name'] = "Login";
+		   $dados['name2'] = "Home";
+        $this->load->view('header', $dados);
         $this->load->view('login');
 		
-	
 	}
 	public function efetuarlogin()
 	{      
@@ -24,13 +24,19 @@ class login extends CI_Controller {
 		  $query = $this->db->get("cliente");
           if($query->num_rows()==1){
 			  $usuario = $query->row();
-			  $this->session->set_userdata("usuario", $usuario->nome);
-                redirect("home");
+			  $this->session->set_userdata("usuario", $usuario->nome);			
+				redirect('home/logado');
           }else{
+			  $dale['name'] = "Login";
 			  $dados['aviso'] = 'Email ou senha Incorreto';
-			  $this->load->view('header');
+			  $this->load->view('header', $dale);
           	$this->load->view('login', $dados);
           }
+	}
+	public function deslogar(){
+	  $this->session->set_userdata("usuario", "");
+	  redirect("home");
+
 	}
 
 }

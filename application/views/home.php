@@ -16,36 +16,7 @@
 </head>
 
 <body>
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Artsport</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Sobre</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contratar</a>
-          </li>
-        </ul>
-      </div>
-      <ul class="nav-item">
-      <li><a href="<?php echo base_url('index.php/login')?>"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
-    </ul>
-    <ul class="nav-item">
-      <li><a href="<?php echo base_url('index.php/register')?>"><span class="glyphicon glyphicon-log-in"></span>Registrar</a></li>
-    </ul>
-    </div>
-  </nav>
-  <div class="container">
 
     <div class="row">
 
@@ -53,7 +24,7 @@
 
         <h1 class="my-4">Categorias</h1>
         <div class="list-group">
-          <a href="#" class="list-group-item">Calçados</a>
+          <a href="<?php echo base_url('index.php/compras')?>" class="list-group-item">Calçados</a>
           <a href="#" class="list-group-item">Roupas</a>
           <a href="#" class="list-group-item">Suplementos</a>
           <a href="#" class="list-group-item">Equipamentos</a>

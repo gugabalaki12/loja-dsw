@@ -5,8 +5,10 @@ class compras extends CI_Controller {
 	public function __construct(){
         parent::__construct();
          $user = $this->session->userdata["usuario"];
-         if($user == ""){
-             redirect("login");
+        echo "$user";
+         if(empty($user)){
+             echo "entrei aki";
+            redirect("login");
          }
     
 	}
